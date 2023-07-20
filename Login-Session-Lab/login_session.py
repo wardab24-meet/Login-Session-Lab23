@@ -4,7 +4,10 @@ from flask import session as login_session
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'super-secret-key'
 
-@app.route('/', ) # What methods are needed?
+@app.route('/login_session.py' , methods=['GET' , 'POST']) # What methods are needed?
+	if request.method == 'POST'
+		return 'info is saved'
+
 def home():
 	
 	return render_template('home.html')
@@ -26,6 +29,9 @@ def display():
 def thanks():
 
 	return render_template('thanks.html')
+
+
+
 
 
 if __name__ == '__main__':
